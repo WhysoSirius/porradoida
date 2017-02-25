@@ -1,45 +1,140 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>MathJax MathML Test Page</title>
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_CHTML">
+<title>MathJax Equation Numbering</title>
+<!-- Copyright (c) 2012-2016 The MathJax Consortium -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "AMS"} } });
 </script>
+<script type="text/javascript" src="../MathJax.js?config=TeX-AMS_HTML"></script>
+
+<style>
+h1 {
+  background: #CCCCCC;
+  padding: .2em 1em;
+  border-top: 3px solid #666666;
+  border-bottom: 3px solid #999999;
+}
+</style>
+
 </head>
 <body>
 
-<p>
-When
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>a</mi><mo>&#x2260;</mo><mn>0</mn>
-</math>,
-there are two solutions to
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>a</mi><msup><mi>x</mi><mn>2</mn></msup>
-  <mo>+</mo> <mi>b</mi><mi>x</mi>
-  <mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn>
-</math>
-and they are
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-  <mi>x</mi> <mo>=</mo>
-  <mrow>
-    <mfrac>
-      <mrow>
-        <mo>&#x2212;</mo>
-        <mi>b</mi>
-        <mo>&#x00B1;</mo>
-        <msqrt>
-          <msup><mi>b</mi><mn>2</mn></msup>
-          <mo>&#x2212;</mo>
-          <mn>4</mn><mi>a</mi><mi>c</mi>
-        </msqrt>
-      </mrow>
-      <mrow> <mn>2</mn><mi>a</mi> </mrow>
-    </mfrac>
-  </mrow>
-  <mtext>.</mtext>
-</math>
-</p>
+<center>
+<h1>A test of Equation Numbering</h1>
+</center>
+
+<div style="padding:0 2em">
+<hr>
+Equation:
+
+\begin{equation}
+E = mc^2
+\end{equation}
+
+Equation*:
+
+\begin{equation*}
+E = mc^2
+\end{equation*}
+
+<hr>
+Brackets:
+
+\[E = mc^2\]
+
+Brackets tagged:
+
+\[E = mc^2\tag{x}\]
+
+<hr>
+Split:
+
+\begin{equation}
+\begin{split} 
+a& =b+c-d\\ 
+& \quad +e-f\\ 
+& =g+h\\ 
+& =i 
+\end{split} 
+\end{equation} 
+
+<hr>
+Multline:
+
+\begin{multline}
+  a+b+c+d+e+f+g\\
+  M+N+O+P+Q\\
+  R+S+T\\
+  u+v+w+x+y+z
+\end{multline}
+
+Multline*:
+
+\begin{multline*}
+  a+b+c+d+e+f+g\\
+  M+N+O+P+Q\\
+  R+S+T\\
+  u+v+w+x+y+z
+\end{multline*}
+
+<hr>
+Gather:
+
+\begin{gather} 
+a_1=b_1+c_1\\ 
+a_2=b_2+c_2-d_2+e_2 
+\end{gather} 
+
+Gather*:
+
+\begin{gather*} 
+a_1=b_1+c_1\\ 
+a_2=b_2+c_2-d_2+e_2 
+\end{gather*} 
+
+<hr>
+Align:
+
+\begin{align} 
+a_1& =b_1+c_1\\ 
+a_2& =b_2+c_2-d_2+e_2 
+\end{align}
+
+Align*:
+
+\begin{align*} 
+a_1& =b_1+c_1\\ 
+a_2& =b_2+c_2-d_2+e_2 
+\end{align*}
+
+Align:
+
+\begin{align} 
+a_{11}& =b_{11}& a_{12}& =b_{12}\\ 
+a_{21}& =b_{21}& a_{22}& =b_{22}+c_{22} 
+\end{align}
+
+Align with \notag and \tag:
+
+\begin{align} 
+a_{11}& =b_{11}& a_{12}& =b_{12}\notag\\ 
+a_{21}& =b_{21}& a_{22}& =b_{22}+c_{22} \tag{y}
+\end{align}
+
+Align* with \tag:
+
+\begin{align*} 
+a_1& =b_1+c_1\tag{z}\\ 
+a_2& =b_2+c_2-d_2+e_2 
+\end{align*}
+
+</div>
 
 </body>
 </html>
